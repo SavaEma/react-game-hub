@@ -14,7 +14,7 @@ const apiClient = new APClient<Platform>("/platforms/lists/parents");
 const usePlatforms = () => {
   return useQuery({
     queryKey: ["platforms"],
-    queryFn: apiClient.get,
+    queryFn: apiClient.getAll,
     staleTime: ms("24h"),
     initialData: platforms,
   });
